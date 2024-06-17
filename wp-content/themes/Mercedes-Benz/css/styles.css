@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "corpoA";
+  src: url("../assets/fonts/Fonts/CorpoA.woff2") format("woff2");
+}
+@font-face {
+  font-family: "corpoS";
+  src: url("../assets/fonts/Fonts/CorpoS.woff2") format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "corpoS", sans-serif;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  margin: 0 !important;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "corpoA", sans-serif;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  width: 100%;
+}
+.header .logoSection {
+  display: flex;
+  align-items: center;
+}
+.header .logoSection img {
+  width: 274px;
+  height: auto;
+}
+.header .navMenu nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header .navMenu nav ul li {
+  border-right: 1px solid #939393;
+}
+.header .navMenu nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "corpoA", sans-serif;
+  transition: color 0.3s ease;
+  padding: 6px 17px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.header .navMenu nav ul li a img {
+  height: 16px;
+  width: 16px;
+}
+.header .navMenu nav ul li:last-child {
+  border-right: 1px solid transparent !important;
+}
+
+@media (min-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 36px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
