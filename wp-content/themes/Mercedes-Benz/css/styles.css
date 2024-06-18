@@ -98,7 +98,7 @@ a {
 }
 .advancedSearch {
   justify-content: center;
-  padding: 12px 26px 0 26px;
+  padding: 68px 5% 68px 70px;
   background: #DEDEDE;
 }
 .advancedSearch .toggleButton {
@@ -305,6 +305,7 @@ a {
 }
 
 .swiper {
+  background-color: black;
   height: 100%;
 }
 .swiper .swiper-wrapper .swiper-slide {
@@ -333,6 +334,205 @@ a {
     height: 80vh;
     object-position: 30%;
   }
+  #swiper-scrollbar {
+    background-color: white;
+    width: 200px !important;
+    left: var(--swiper-scrollbar-sides-offset, 40%) !important;
+    bottom: var(--swiper-scrollbar-bottom, 5%) !important;
+  }
+  #swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: #0CA2E3;
+    z-index: 2;
+  }
+}
+.mainMessage {
+  display: flex;
+  padding: 0 5% 2rem 5%;
+  background-color: black;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+.mainMessage .title {
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 76px;
+  text-align: left;
+  font-family: "corpoA";
+  color: white;
+  max-width: 40%;
+}
+.mainMessage .message {
+  font-family: "corpoA";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 35px;
+  color: white;
+  text-align: right;
+  max-width: 40%;
+}
+.mainMessage .message span {
+  color: #0CA2E3;
+  font-family: "corpoA";
+}
+
+@media (max-width: 900px) {
+  .mainMessage {
+    padding: 2rem 5%;
+    flex-direction: column;
+    align-items: start;
+    gap: 26px;
+  }
+  .mainMessage .title {
+    max-width: 80%;
+  }
+  .mainMessage .message {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+.homeSection {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 36px;
+}
+.homeSection .advancedSearch .searchFilters {
+  display: block;
+}
+.homeSection .rightSection {
+  display: flex;
+  flex-direction: column;
+  padding: 68px 5% 68px 0;
+  width: 100%;
+  gap: 36px;
+}
+.homeSection .rightSection h2 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  font-family: "corpoA";
+}
+.homeSection .rightSection h2 span {
+  color: #0CA2E3;
+  font-family: "corpoA";
+}
+.homeSection .rightSection .cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 41px;
+}
+.homeSection .rightSection .cardsContainer .cardInfo {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .cardImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .name {
+  padding: 22px 20px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: black;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .value {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: #DEDEDE;
+  gap: 10px;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .value .price {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .value .price .badge {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: right;
+  color: #161D2B;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .value .price .badge .country {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  color: #161D2B;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .value .price .amount {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  color: #161D2B;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .features {
+  padding: 11px 20px 27px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 17px;
+  align-items: center;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .features .feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .features .feature .description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: black;
+}
+.homeSection .rightSection .cardsContainer .cardInfo a {
+  width: 85%;
+  height: 48px;
+  padding: 18px 24px;
+  color: white;
+  background-color: #161D2B;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  align-self: center;
+}
+.homeSection .rightSection button {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border: 1px solid #676767;
+  color: #676767;
+  max-width: 229px;
+  height: 50px;
+  border-radius: 100px;
+  align-self: center;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
