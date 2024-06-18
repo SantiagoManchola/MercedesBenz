@@ -8,6 +8,7 @@
 <body>
     <main>
         <?php get_header(); ?>
+        <?php get_avancedSearch() ?>
     </main>
 </body>
 

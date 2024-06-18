@@ -59,7 +59,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 2rem 5%;
     background-color: #000;
     color: #fff;
     position: sticky;
@@ -67,6 +67,8 @@ a {
     left: 0;
     flex-direction: row;
     width: 100%;
+    gap: 36px;
+    z-index: 999;
 
     .logoSection {
         display: flex;
@@ -115,10 +117,241 @@ a {
     }
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
     .header {
         flex-direction: column;
-        gap: 36px;
+        padding: 1rem 5%;
     }
 }
 
+//avancedSearch Styles
+
+.advancedSearch {
+    justify-content: center;
+    padding: 12px 26px 0 26px;
+    background: $light-gray;
+    .toggleButton {
+        border: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid $dark-black;
+        padding-bottom: 10px;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: 'corpoS';
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20.48px;
+        text-align: left;
+    }
+
+    .searchFilters {
+        display: none;
+        .recent{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 0 20px 0;
+            font-family: 'corpoS';
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 25.6px;
+            text-align: left;
+
+            input[type="checkbox"] {
+                display: none;
+            }
+        
+            .toggle-switch {
+                position: relative;
+                width: 36px;
+                height: 20px;
+                background-color: $bg-switch;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+        
+                .switch {
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    background-color: $radio-switch;
+                    border-radius: 50%;
+                    top: 2px;
+                    left: 2px;
+                    transition: transform 0.3s;
+                }
+            }
+        
+            input[type="checkbox"]:checked + .toggle-switch {
+                background-color: #2196F3;
+        
+                .switch {
+                    transform: translateX(16px);
+                    background-color: white;
+                }
+            }
+        }
+
+        .filtersSection{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px 0;
+            border-top: 1px solid $dark-black;
+            border-bottom: 1px solid $dark-black;
+
+            .filterSection {
+                padding: 10px 0;
+                font-family: 'corpoS';
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.48px;
+                text-align: left;
+
+                .filterToggle {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    text-align: left;
+                    background-color: transparent;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20.48px;
+                    text-align: left;
+                    font-family: 'corpoS';
+                    color: $letter-color;
+
+                    img {
+                        transition: transform 0.3s ease;
+                    }
+
+                    &.expanded img {
+                        transform: rotate(180deg);
+                    }
+                }
+        
+                .filterMenu {
+                    display: none;
+                    margin: 10px 0;
+
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        list-style: none;
+                        gap: 15px;
+                    }
+                    
+                    .rangeContainer{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px 0;
+                        input{
+                            outline: none;
+                            width: 45%;
+                            height: 44px;
+                            background-color: transparent;
+                            border: 1px solid $dark-gray;
+                            padding: 14px 20px 14px 33px;
+                            font-size: 12px;
+                            font-weight: 300;
+                            line-height: 16px;
+                            text-align: left;
+                            color: $input-range;
+
+                            &:focus {
+                                border: 2px solid $primary-blue;
+                            }
+                        }
+                    }
+                }
+        
+                &.expanded .filterMenu {
+                    display: block;
+                }
+                }
+        
+                .applyFilterButton {
+                    width: 100%;
+                    height: 40px;
+                    padding: 11px 20px 11px 20px;
+                    border-radius: 80px;
+                    border: 1px solid $letter-color;
+                    background-color: transparent;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 16px;
+                    text-align: center;
+                    color: $letter-color;
+                }
+                
+            }  
+            .activeFilters {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px 0 30px 0;
+
+                .title{
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 23.04px;
+                    text-align: left;
+                    color: black;
+                }
+                
+                .filtersContainer{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                    .removeFilter {
+                        display: flex;
+                        background: transparent;
+                        cursor: pointer;
+                        padding: 11px 20px;
+                        border: 1px solid $letter-color;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 6px;
+                        font-size: 16px;
+                        font-weight: 300;
+                        line-height: 16px;
+                        text-align: left;
+                        color: $letter-color;
+                        border-radius: 80px;
+                    }
+                }
+
+                .clearFilters {
+                    background: transparent;
+                    display: flex;
+                    border: 1px solid $letter-color;
+                    border-radius: 80px;
+                    padding: 11px 20px;
+                    cursor: pointer;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 16px;
+                    text-align: left;
+                }
+            }
+        }
+
+    &.expanded .searchFilters {
+        display: block;
+    }
+}

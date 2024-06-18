@@ -7,6 +7,7 @@
 function loads_scripts()
 {
     global $post;
+
     wp_enqueue_style('style_general', get_template_directory_uri() . '/css/styles.css', array(), '1.0', 'all');
 }
 

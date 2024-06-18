@@ -39,7 +39,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 2rem 5%;
   background-color: #000;
   color: #fff;
   position: sticky;
@@ -47,6 +47,8 @@ a {
   left: 0;
   flex-direction: row;
   width: 100%;
+  gap: 36px;
+  z-index: 999;
 }
 .header .logoSection {
   display: flex;
@@ -88,11 +90,218 @@ a {
   border-right: 1px solid transparent !important;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
   .header {
     flex-direction: column;
-    gap: 36px;
+    padding: 1rem 5%;
   }
+}
+.advancedSearch {
+  justify-content: center;
+  padding: 12px 26px 0 26px;
+  background: #DEDEDE;
+}
+.advancedSearch .toggleButton {
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #20242C;
+  padding-bottom: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "corpoS";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.48px;
+  text-align: left;
+}
+.advancedSearch .searchFilters {
+  display: none;
+}
+.advancedSearch .searchFilters .recent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 20px 0;
+  font-family: "corpoS";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.6px;
+  text-align: left;
+}
+.advancedSearch .searchFilters .recent input[type=checkbox] {
+  display: none;
+}
+.advancedSearch .searchFilters .recent .toggle-switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background-color: #BCBCBC;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.advancedSearch .searchFilters .recent .toggle-switch .switch {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #919799;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+.advancedSearch .searchFilters .recent input[type=checkbox]:checked + .toggle-switch {
+  background-color: #2196F3;
+}
+.advancedSearch .searchFilters .recent input[type=checkbox]:checked + .toggle-switch .switch {
+  transform: translateX(16px);
+  background-color: white;
+}
+.advancedSearch .searchFilters .filtersSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #20242C;
+  border-bottom: 1px solid #20242C;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection {
+  padding: 10px 0;
+  font-family: "corpoS";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.48px;
+  text-align: left;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterToggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.48px;
+  text-align: left;
+  font-family: "corpoS";
+  color: #33363f;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterToggle img {
+  transition: transform 0.3s ease;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterToggle.expanded img {
+  transform: rotate(180deg);
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterMenu {
+  display: none;
+  margin: 10px 0;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterMenu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterMenu .rangeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterMenu .rangeContainer input {
+  outline: none;
+  width: 45%;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid #939393;
+  padding: 14px 20px 14px 33px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  text-align: left;
+  color: #666;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection .filterMenu .rangeContainer input:focus {
+  border: 2px solid #0CA2E3;
+}
+.advancedSearch .searchFilters .filtersSection .filterSection.expanded .filterMenu {
+  display: block;
+}
+.advancedSearch .searchFilters .filtersSection .applyFilterButton {
+  width: 100%;
+  height: 40px;
+  padding: 11px 20px 11px 20px;
+  border-radius: 80px;
+  border: 1px solid #33363f;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  color: #33363f;
+}
+.advancedSearch .searchFilters .activeFilters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0 30px 0;
+}
+.advancedSearch .searchFilters .activeFilters .title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.04px;
+  text-align: left;
+  color: black;
+}
+.advancedSearch .searchFilters .activeFilters .filtersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.advancedSearch .searchFilters .activeFilters .filtersContainer .removeFilter {
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  padding: 11px 20px;
+  border: 1px solid #33363f;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  text-align: left;
+  color: #33363f;
+  border-radius: 80px;
+}
+.advancedSearch .searchFilters .activeFilters .clearFilters {
+  background: transparent;
+  display: flex;
+  border: 1px solid #33363f;
+  border-radius: 80px;
+  padding: 11px 20px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+}
+.advancedSearch.expanded .searchFilters {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
