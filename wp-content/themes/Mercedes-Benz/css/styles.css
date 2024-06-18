@@ -304,4 +304,35 @@ a {
   display: block;
 }
 
+.swiper {
+  height: 100%;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  overflow: hidden;
+}
+.swiper .swiper-wrapper .swiper-slide img {
+  object-fit: cover;
+  max-width: 100vw;
+}
+.swiper .swiper-scrollbar {
+  background-color: white;
+  width: 200px !important;
+  left: var(--swiper-scrollbar-sides-offset, 80%) !important;
+  bottom: var(--swiper-scrollbar-bottom, 5%) !important;
+}
+.swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: #0CA2E3;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .swiper .swiper-slide img {
+    max-width: 100%;
+    width: auto;
+    height: 80vh;
+    object-position: 30%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

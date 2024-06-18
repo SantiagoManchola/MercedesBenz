@@ -14,12 +14,11 @@ function get_avancedSearch()
 register_nav_menus(array(
     'primary' => __('Principal', 'translate-ss'),
 ));
-/* 
-add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
-function enqueue_custom_scripts()
+function add_swiper_scripts()
 {
-    wp_register_script('advanced-search-js', get_template_directory_uri() . 'js/main.js', array('jquery'), null, true);
-    wp_enqueue_script('advanced-search-js');
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+
+    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
 }
- */
+add_action('wp_enqueue_scripts', 'add_swiper_scripts');

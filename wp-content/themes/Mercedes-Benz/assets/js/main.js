@@ -98,5 +98,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        autoplay:{
+            delay:5000,
+        }
+      });
+
+
 });

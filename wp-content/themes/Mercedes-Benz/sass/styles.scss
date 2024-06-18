@@ -355,3 +355,45 @@ a {
         display: block;
     }
 }
+
+//swiper styles
+
+.swiper{
+    height: 100%;
+    .swiper-wrapper{
+        .swiper-slide{
+            width: 100%;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                max-width: 100vw;
+            }
+        }
+
+    }
+    .swiper-scrollbar{
+        background-color: white;
+        width: 200px !important;
+        left: var(--swiper-scrollbar-sides-offset, 80%) !important;
+        bottom: var(--swiper-scrollbar-bottom, 5%) !important;
+        .swiper-scrollbar-drag{
+            background-color: $primary-blue;
+            z-index: 2;
+        }
+
+
+    }
+}
+
+@media (max-width: 900px) {
+    .swiper {
+        .swiper-slide{
+            img{
+                max-width: 100%;
+                width: auto;
+                height: 80vh;
+                object-position: 30%;
+            }
+        }
+    }
+}
