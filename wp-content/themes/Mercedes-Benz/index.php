@@ -26,7 +26,9 @@
                 <h2>Publicaciones <span>destacadas</span></h2>
                 <div class="cardsContainer">
                     <div class="cardInfo">
-                        <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        <div class="imgContainer">
+                            <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        </div>
                         <div class="name">52 E 300e AZUL</div>
                         <div class="value">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/ticket.svg" alt="">
@@ -55,7 +57,9 @@
                         <a href="">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
                     </div>
                     <div class="cardInfo">
-                        <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        <div class="imgContainer">
+                            <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        </div>
                         <div class="name">52 E 300e AZUL</div>
                         <div class="value">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/ticket.svg" alt="">
@@ -84,7 +88,9 @@
                         <a href="">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
                     </div>
                     <div class="cardInfo">
-                        <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        <div class="imgContainer">
+                            <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        </div>
                         <div class="name">52 E 300e AZUL</div>
                         <div class="value">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/ticket.svg" alt="">
@@ -113,7 +119,9 @@
                         <a href="">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
                     </div>
                     <div class="cardInfo">
-                        <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        <div class="imgContainer">
+                            <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        </div>
                         <div class="name">52 E 300e AZUL</div>
                         <div class="value">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/ticket.svg" alt="">
@@ -142,7 +150,9 @@
                         <a href="">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
                     </div>
                     <div class="cardInfo">
-                        <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        <div class="imgContainer">
+                            <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        </div>
                         <div class="name">52 E 300e AZUL</div>
                         <div class="value">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/ticket.svg" alt="">
@@ -171,7 +181,9 @@
                         <a href="">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
                     </div>
                     <div class="cardInfo">
-                        <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        <div class="imgContainer">
+                            <img class="cardImage" src="<?php echo get_template_directory_uri(); ?>/assets/images/cardImage.png" alt="">
+                        </div>
                         <div class="name">52 E 300e AZUL</div>
                         <div class="value">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/ticket.svg" alt="">
@@ -203,6 +215,7 @@
                 <button><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/darkCard.svg" alt="">Cargar más vehículos</button>
             </div>
         </div>
+        <?php get_footer(); ?>
     </main>
 </body>
 

@@ -428,10 +428,19 @@ a {
   flex-direction: column;
   width: 300px;
 }
-.homeSection .rightSection .cardsContainer .cardInfo .cardImage {
+.homeSection .rightSection .cardsContainer .cardInfo .imgContainer {
+  max-height: 209px;
+  max-width: 300px;
+  overflow: hidden;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .imgContainer .cardImage {
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.5s;
+}
+.homeSection .rightSection .cardsContainer .cardInfo .imgContainer .cardImage:hover {
+  transform: scale(1.4);
 }
 .homeSection .rightSection .cardsContainer .cardInfo .name {
   padding: 22px 20px;
@@ -533,6 +542,115 @@ a {
   align-self: center;
   background-color: transparent;
   cursor: pointer;
+}
+
+.footer {
+  padding: 68px 5% 26px 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+.footer .messageSection {
+  font-family: "corpoA";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+.footer .messageSection span {
+  font-family: "corpoA";
+  color: #0CA2E3;
+}
+.footer .socialSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 25px;
+  padding: 26px 0;
+}
+.footer .headquarters {
+  display: flex;
+  flex-direction: row;
+  padding: 26px 0;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.footer .headquarters .mercedesUruguay, .footer .headquarters .whereWeAre {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.footer .headquarters .mercedesUruguay .title, .footer .headquarters .whereWeAre .title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+.footer .headquarters .mercedesUruguay .elements, .footer .headquarters .whereWeAre .elements {
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+}
+.footer .headquarters .mercedesUruguay .elements .elementContact, .footer .headquarters .whereWeAre .elements .elementContact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+.footer .headquarters .mercedesUruguay .elements .elementContact .titleNumber, .footer .headquarters .whereWeAre .elements .elementContact .titleNumber {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+.footer .headquarters .mercedesUruguay .elements .elementContact .desc, .footer .headquarters .whereWeAre .elements .elementContact .desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+}
+.footer .informationLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #939393;
+}
+.footer .informationLinks .policies a {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 10px;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+}
+.footer .informationLinks .rights {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 10px;
+  text-align: right;
+  color: white;
+}
+.footer .credits {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: center;
+  color: white;
+  align-self: end;
+}
+.footer .credits a {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
