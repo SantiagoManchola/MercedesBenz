@@ -100,6 +100,7 @@ a {
   justify-content: center;
   padding: 68px 5% 68px 70px;
   background: #DEDEDE;
+  max-width: 401px;
 }
 .advancedSearch .toggleButton {
   border: none;
@@ -304,6 +305,12 @@ a {
   display: block;
 }
 
+@media (max-width: 900px) {
+  .advancedSearch {
+    max-width: 100% !important;
+    padding: 5% 5% 0 5%;
+  }
+}
 .swiper {
   background-color: black;
   height: 100%;
@@ -385,9 +392,17 @@ a {
   }
   .mainMessage .title {
     max-width: 80%;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 62px;
+    text-align: left;
   }
   .mainMessage .message {
     max-width: 100%;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
     text-align: left;
   }
 }
@@ -527,7 +542,42 @@ a {
   gap: 6px;
   align-self: center;
 }
-.homeSection .rightSection button {
+.homeSection .rightSection .footerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.homeSection .rightSection .footerSection .stock {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.homeSection .rightSection .footerSection .stock .disponibility {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+  color: #161D2B;
+}
+.homeSection .rightSection .footerSection .stock .amount {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #161D2B;
+}
+.homeSection .rightSection .footerSection .stock .amount span {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  color: #0CA2E3;
+}
+.homeSection .rightSection .footerSection button {
   display: flex;
   flex-direction: row;
   gap: 14px;
@@ -544,6 +594,22 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  .homeSection .rightSection {
+    padding: 30px 47px;
+  }
+  .homeSection .rightSection h2 {
+    display: none;
+  }
+  .homeSection .rightSection .footerSection .stock {
+    display: flex;
+  }
+}
+@media (max-width: 1090px) {
+  .homeSection .rightSection .cardsContainer {
+    align-self: center;
+  }
+}
 .footer {
   padding: 68px 5% 26px 5%;
   display: flex;

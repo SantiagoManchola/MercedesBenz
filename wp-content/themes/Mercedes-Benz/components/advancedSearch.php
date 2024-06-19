@@ -1,4 +1,4 @@
-<div class="advancedSearch">
+<div id="advancedSearchContainer" class="advancedSearch">
     <button class="toggleButton"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/avancedSearch/filter.svg" alt="">Búsqueda avanzada</button>
     <div class="searchFilters">
         <label class="recent">

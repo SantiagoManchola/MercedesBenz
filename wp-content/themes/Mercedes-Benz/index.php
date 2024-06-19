@@ -8,6 +8,7 @@
 <body>
     <main>
         <?php get_header(); ?>
+        <?php get_advancedSearch(); ?>
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/image(1).png" alt="" alt=""></div>
@@ -20,8 +21,7 @@
             <div class="title">Excelencia en cada kilómetro</div>
             <div class="message">Encontrá tu <span class="mercedesWord">Mercedes-Benz</span> usado con la garantía de calidad y lujo que merecés.</div>
         </div>
-        <div class="homeSection">
-            <?php get_avancedSearch() ?>
+        <div id="homeSection" class="homeSection">
             <div class="rightSection">
                 <h2>Publicaciones <span>destacadas</span></h2>
                 <div class="cardsContainer">
@@ -212,7 +212,14 @@
                         <a href="">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
                     </div>
                 </div>
-                <button><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/darkCard.svg" alt="">Cargar más vehículos</button>
+                <div class="footerSection">
+                    <div class="stock">
+                        <div class="disponibilty">Vehículos disponibles</div>
+                        <div class="amount"><span>5</span> Resultados</div>
+                    </div>
+                    <button><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/darkCard.svg" alt="">Cargar más vehículos</button>
+                </div>
+
             </div>
         </div>
         <?php get_footer(); ?>

@@ -5,10 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggleButtons = document.querySelectorAll('.filterToggle');
     const filters = new Set();
     const filtersContainer = document.querySelector('.filtersContainer');
+    const advancedSearchContainer = document.getElementById("advancedSearchContainer");
+
 
     toggleButton.addEventListener("click", function() {
         advancedSearch.classList.toggle("expanded");
     });
+    
 
     filterToggles.forEach(button => {
         button.addEventListener("click", function() {
@@ -109,5 +112,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
 
+    function moveAdvancedSearch() {
+        if (window.innerWidth > 900) {
+            if (homeSection.firstChild !== advancedSearch) {
+                homeSection.insertBefore(advancedSearch, homeSection.firstChild);
+            }
+        } else {
+            const header = document.querySelector("header");
+            if (header.nextSibling !== advancedSearch) {
+                header.parentNode.insertBefore(advancedSearch, header.nextSibling);
+            }
+        }
+    }
+    moveAdvancedSearch();
+    window.addEventListener("resize", moveAdvancedSearch);
 
 });

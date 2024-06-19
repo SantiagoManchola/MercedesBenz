@@ -6,9 +6,9 @@
  */
 require get_template_directory() . '/includes/js_css.php';
 
-function get_avancedSearch()
+function get_advancedSearch()
 {
-    get_template_part('./components/avancedSearch', 'avancedSearch');
+    get_template_part('./components/advancedSearch', 'advancedSearch');
 }
 
 register_nav_menus(array(
