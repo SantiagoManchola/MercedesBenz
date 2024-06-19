@@ -685,13 +685,13 @@ a {
                         font-size: 18px;
                         font-weight: 700;
                         line-height: 20px;
-                        text-align: center;
+                        text-align: left;
                     }
                     .desc{
                         font-size: 16px;
                         font-weight: 300;
                         line-height: 20px;
-                        text-align: center;
+                        text-align: left;
                     }
                 }
             }
@@ -704,6 +704,11 @@ a {
         align-items: center;
         padding: 20px 0;
         border-top: 1px solid $dark-gray;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 10px;
+        text-align: left;
+        color: white;
         .policies{
             a{
                 font-size: 12px;
@@ -737,6 +742,42 @@ a {
             text-align: center;
             color: white;
             text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 1250px){
+    .footer{
+        .socialSection{
+            justify-content: center;
+        }
+        .headquarters{
+            flex-direction: column;
+            align-items: start;
+            gap: 35px;
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .footer{
+        .socialSection{
+            justify-content: left;
+        }
+        .headquarters{
+            .mercedesUruguay{
+                .elements{
+                    flex-direction: column;
+                    gap: 26px;
+                }
+            }
+        }
+        .informationLinks{
+            flex-direction: column;
+            justify-content: left;
+            .rights{
+                text-align: left;
+            }
         }
     }
 }
