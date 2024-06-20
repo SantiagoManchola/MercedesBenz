@@ -54,7 +54,7 @@
                                 <span class="description">2023</span>
                             </div>
                         </div>
-                        <a href="">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
+                        <a href="<?php echo esc_url(home_url('/?page_id=8')); ?>">Más información <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/home/diagonalArrow.svg" alt=""></a>
                     </div>
                     <div class="cardInfo">
                         <div class="imgContainer">
